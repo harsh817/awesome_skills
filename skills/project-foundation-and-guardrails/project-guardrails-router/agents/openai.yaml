@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Guardrails Router"
+  short_description: "Runs all project guardrails in order"
+  default_prompt: "Use $project-guardrails-router to create AGENT_GUARDRAILS.md for this project."
