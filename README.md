@@ -1,6 +1,6 @@
 # awesome_skills
 
-Project planning, foundation, guardrail, design, delivery, and shipping skills for coding agents.
+Project planning, foundation, guardrail, design, delivery, shipping, and production readiness skills for coding agents.
 
 This repository contains a coordinated set of skills based on the design principles from John Ousterhout's *A Philosophy of Software Design*: reduce complexity, prefer deep modules, hide information behind stable interfaces, keep dependencies obvious, and work strategically.
 
@@ -131,6 +131,37 @@ For build, review, test, and push:
 
 ```text
 Use $feature-ship-router to create FEATURE_DELIVERY.md and ship this feature.
+```
+
+## Phase 4 Audit
+
+Main entry point:
+
+- `production-readiness-router` - invokes the production readiness audit skills one by one and creates or updates `PRODUCTION_READINESS.md`, the comprehensive audit document for deciding production readiness.
+
+Folder:
+
+- `Software Engineering/Phase 4 Audit/production-readiness-audit`
+
+The production readiness audit skills are:
+
+- `requirements-completeness-audit`
+- `architecture-complexity-audit`
+- `code-quality-documentation-audit`
+- `functional-regression-test-audit`
+- `security-readiness-audit`
+- `data-migration-audit`
+- `performance-capacity-audit`
+- `reliability-failure-audit`
+- `deployment-rollback-audit`
+- `observability-operations-audit`
+- `full-system-adversarial-review`
+- `production-readiness-decision`
+
+For production readiness:
+
+```text
+Use $production-readiness-router to create PRODUCTION_READINESS.md and decide readiness.
 ```
 
 Each router skill tells the agent to invoke the matching group skills in order and synthesize the results into a durable Markdown reference for future coding work.

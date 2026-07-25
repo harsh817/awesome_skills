@@ -1,0 +1,4 @@
+interface:
+  display_name: "data-migration-audit"
+  short_description: "Audits schema, migrations, transactions, and recovery"
+  default_prompt: "Use $data-migration-audit to audit data and migration readiness."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "full-system-adversarial-review"
+  short_description: "Searches for hidden readiness assumptions"
+  default_prompt: "Use $full-system-adversarial-review to run an adversarial production review."

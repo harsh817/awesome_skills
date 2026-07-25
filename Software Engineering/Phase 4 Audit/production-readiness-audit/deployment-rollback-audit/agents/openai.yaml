@@ -1,0 +1,4 @@
+interface:
+  display_name: "deployment-rollback-audit"
+  short_description: "Audits deploy pipeline, staging, and rollback"
+  default_prompt: "Use $deployment-rollback-audit to audit deployment and rollback readiness."

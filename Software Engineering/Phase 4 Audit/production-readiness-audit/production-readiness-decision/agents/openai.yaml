@@ -1,0 +1,4 @@
+interface:
+  display_name: "production-readiness-decision"
+  short_description: "Combines audit evidence into a readiness decision"
+  default_prompt: "Use $production-readiness-decision to decide production readiness."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "functional-regression-test-audit"
+  short_description: "Audits functional, edge, and regression tests"
+  default_prompt: "Use $functional-regression-test-audit to audit production test readiness."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "observability-operations-audit"
+  short_description: "Audits logs, metrics, alerts, runbooks, and ownership"
+  default_prompt: "Use $observability-operations-audit to audit observability and operations readiness."

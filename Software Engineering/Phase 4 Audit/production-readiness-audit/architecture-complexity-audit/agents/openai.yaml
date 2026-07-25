@@ -1,0 +1,4 @@
+interface:
+  display_name: "architecture-complexity-audit"
+  short_description: "Reviews architecture with complexity red flags"
+  default_prompt: "Use $architecture-complexity-audit to audit module boundaries and complexity."

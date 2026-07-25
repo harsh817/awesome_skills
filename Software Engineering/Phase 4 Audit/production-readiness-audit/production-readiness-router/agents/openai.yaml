@@ -1,0 +1,4 @@
+interface:
+  display_name: "production-readiness-router"
+  short_description: "Routes a full production readiness audit"
+  default_prompt: "Use $production-readiness-router to audit production readiness and write PRODUCTION_READINESS.md."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "security-readiness-audit"
+  short_description: "Audits auth, secrets, input, and abuse risks"
+  default_prompt: "Use $security-readiness-audit to audit production security readiness."

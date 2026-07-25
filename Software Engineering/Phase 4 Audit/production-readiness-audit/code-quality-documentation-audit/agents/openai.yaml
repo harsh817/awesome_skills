@@ -1,0 +1,4 @@
+interface:
+  display_name: "code-quality-documentation-audit"
+  short_description: "Checks readability, comments, docs, and cleanup"
+  default_prompt: "Use $code-quality-documentation-audit to audit code quality and documentation."

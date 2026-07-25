@@ -1,0 +1,4 @@
+interface:
+  display_name: "reliability-failure-audit"
+  short_description: "Audits failures, retries, idempotency, and recovery"
+  default_prompt: "Use $reliability-failure-audit to audit reliability and failure readiness."

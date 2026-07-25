@@ -1,0 +1,4 @@
+interface:
+  display_name: "performance-capacity-audit"
+  short_description: "Audits measured performance and capacity"
+  default_prompt: "Use $performance-capacity-audit to audit performance and capacity readiness."

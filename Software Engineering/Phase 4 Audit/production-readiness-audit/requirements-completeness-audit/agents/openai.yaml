@@ -1,0 +1,4 @@
+interface:
+  display_name: "requirements-completeness-audit"
+  short_description: "Checks must-have journeys and acceptance evidence"
+  default_prompt: "Use $requirements-completeness-audit to confirm production requirements are complete."
