@@ -1,12 +1,12 @@
 # awesome_skills
 
-Project foundation and guardrail skills for coding agents.
+Project planning, foundation, and guardrail skills for coding agents.
 
 This repository contains a coordinated set of skills based on the design principles from John Ousterhout's *A Philosophy of Software Design*: reduce complexity, prefer deep modules, hide information behind stable interfaces, keep dependencies obvious, and work strategically.
 
-## Skills
+## Group 0: Project Foundation And Guardrails
 
-The main entry point is:
+Main entry point:
 
 - `project-guardrails-router` - invokes all guardrail skills one by one and creates `AGENT_GUARDRAILS.md`, the project-wide document coding agents must read from start to finish.
 
@@ -25,12 +25,38 @@ The guardrail skills are:
 - `git-and-change-rules`
 - `ai-agent-operating-rules`
 
+## Group 1: Break The App Outcome Into Features
+
+Main entry point:
+
+- `feature-breakdown-router` - invokes the feature-breakdown skills one by one and creates `FEATURE_MAP.md`, the ordered feature map coding agents can build from.
+
+The feature-breakdown skills are:
+
+- `outcome-definition`
+- `user-identification`
+- `user-journey-mapping`
+- `journey-to-action-breakdown`
+- `action-to-feature-breakdown`
+- `business-rule-discovery`
+- `failure-case-discovery`
+- `feature-grouping`
+- `feature-prioritization`
+- `vertical-slice-creation`
+- `feature-map-document`
+
 ## Recommended Use
 
-Invoke:
+For project guardrails:
 
 ```text
 Use $project-guardrails-router to create AGENT_GUARDRAILS.md for this project.
 ```
 
-The router skill tells the agent to invoke each guardrail skill in order and synthesize the results into a durable Markdown reference for future coding work.
+For feature breakdown:
+
+```text
+Use $feature-breakdown-router to create FEATURE_MAP.md for this project.
+```
+
+Each router skill tells the agent to invoke the matching group skills in order and synthesize the results into a durable Markdown reference for future coding work.

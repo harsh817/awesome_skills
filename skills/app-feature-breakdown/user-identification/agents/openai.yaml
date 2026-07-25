@@ -1,0 +1,4 @@
+interface:
+  display_name: "user-identification"
+  short_description: "Maps outcomes into buildable features"
+  default_prompt: "Use $user-identification to break app outcomes into features."

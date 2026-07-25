@@ -1,0 +1,4 @@
+interface:
+  display_name: "business-rule-discovery"
+  short_description: "Maps outcomes into buildable features"
+  default_prompt: "Use $business-rule-discovery to break app outcomes into features."

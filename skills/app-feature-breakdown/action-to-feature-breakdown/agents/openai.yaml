@@ -1,0 +1,4 @@
+interface:
+  display_name: "action-to-feature-breakdown"
+  short_description: "Maps outcomes into buildable features"
+  default_prompt: "Use $action-to-feature-breakdown to break app outcomes into features."

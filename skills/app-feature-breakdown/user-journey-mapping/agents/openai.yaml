@@ -1,0 +1,4 @@
+interface:
+  display_name: "user-journey-mapping"
+  short_description: "Maps outcomes into buildable features"
+  default_prompt: "Use $user-journey-mapping to break app outcomes into features."

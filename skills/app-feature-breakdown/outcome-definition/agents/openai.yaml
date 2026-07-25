@@ -1,0 +1,4 @@
+interface:
+  display_name: "outcome-definition"
+  short_description: "Maps outcomes into buildable features"
+  default_prompt: "Use $outcome-definition to break app outcomes into features."

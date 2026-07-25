@@ -1,0 +1,4 @@
+interface:
+  display_name: "journey-to-action-breakdown"
+  short_description: "Maps outcomes into buildable features"
+  default_prompt: "Use $journey-to-action-breakdown to break app outcomes into features."

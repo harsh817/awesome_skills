@@ -1,0 +1,4 @@
+interface:
+  display_name: "feature-breakdown-router"
+  short_description: "Maps outcomes into buildable features"
+  default_prompt: "Use $feature-breakdown-router to break app outcomes into features."

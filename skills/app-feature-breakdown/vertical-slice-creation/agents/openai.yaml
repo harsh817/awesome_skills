@@ -1,0 +1,4 @@
+interface:
+  display_name: "vertical-slice-creation"
+  short_description: "Maps outcomes into buildable features"
+  default_prompt: "Use $vertical-slice-creation to break app outcomes into features."

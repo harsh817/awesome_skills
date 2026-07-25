@@ -1,0 +1,4 @@
+interface:
+  display_name: "failure-case-discovery"
+  short_description: "Maps outcomes into buildable features"
+  default_prompt: "Use $failure-case-discovery to break app outcomes into features."

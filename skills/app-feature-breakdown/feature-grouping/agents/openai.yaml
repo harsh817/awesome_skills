@@ -1,0 +1,4 @@
+interface:
+  display_name: "feature-grouping"
+  short_description: "Maps outcomes into buildable features"
+  default_prompt: "Use $feature-grouping to break app outcomes into features."
