@@ -4,11 +4,19 @@ Project planning, foundation, and guardrail skills for coding agents.
 
 This repository contains a coordinated set of skills based on the design principles from John Ousterhout's *A Philosophy of Software Design*: reduce complexity, prefer deep modules, hide information behind stable interfaces, keep dependencies obvious, and work strategically.
 
-## Group 0: Project Foundation And Guardrails
+## Software Engineering
+
+All skills live under `Software Engineering/`.
+
+## Phase 0 Foundation
 
 Main entry point:
 
 - `project-guardrails-router` - invokes all guardrail skills one by one and creates `AGENT_GUARDRAILS.md`, the project-wide document coding agents must read from start to finish.
+
+Folder:
+
+- `Software Engineering/Phase 0 Foundation/project-foundation-and-guardrails`
 
 The guardrail skills are:
 
@@ -25,11 +33,15 @@ The guardrail skills are:
 - `git-and-change-rules`
 - `ai-agent-operating-rules`
 
-## Group 1: Break The App Outcome Into Features
+## Phase 1 Features
 
 Main entry point:
 
 - `feature-breakdown-router` - invokes the feature-breakdown skills one by one and creates `FEATURE_MAP.md`, the ordered feature map coding agents can build from.
+
+Folder:
+
+- `Software Engineering/Phase 1 Features/app-feature-breakdown`
 
 The feature-breakdown skills are:
 

@@ -1,13 +1,13 @@
 ---
 name: feature-breakdown-router
-description: Automatically invoke the Group 1 feature-breakdown skills one by one by exact skill name, compare against the project when available, and create or continuously update FEATURE_MAP.md as the comprehensive outcome-to-build-plan document. Use when the user wants one router skill to cover everything needed to achieve the app outcome and keep the feature plan current as changes happen.
+description: Automatically invoke the Phase 1 Features breakdown skills one by one by exact skill name, compare against the project when available, and create or continuously update FEATURE_MAP.md as the comprehensive outcome-to-build-plan document. Use when the user wants one router skill to cover everything needed to achieve the app outcome and keep the feature plan current as changes happen.
 ---
 
 # Feature Breakdown Router
 
 ## Definition
 
-Act as the single entry point for Group 1: Break the app outcome into features. When invoked, do not summarize the workflow from memory and do not skip directly to a backlog. Invoke each named skill below, step by step, in the exact order shown. Use the output of each skill to create or update `FEATURE_MAP.md`.
+Act as the single entry point for Phase 1 Features: break the app outcome into features. When invoked, do not summarize the workflow from memory and do not skip directly to a backlog. Invoke each named skill below, step by step, in the exact order shown. Use the output of each skill to create or update `FEATURE_MAP.md`.
 
 `FEATURE_MAP.md` is the comprehensive project document for achieving the app outcome. It must explain the outcome, users, journeys, actions, rules, failures, feature groups, priorities, vertical slices, and ordered implementation plan. Coding agents should consult it before building features and update it whenever feature decisions change during the project.
 
