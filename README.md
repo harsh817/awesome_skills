@@ -57,6 +57,31 @@ The feature-breakdown skills are:
 - `vertical-slice-creation`
 - `feature-map-document`
 
+## Phase 2 EndToEnd
+
+Main entry point:
+
+- `feature-design-router` - invokes the end-to-end feature design skills one by one and creates `FEATURE_DESIGN.md`, the comprehensive frontend, API, backend, database, and test plan for one feature.
+
+Folder:
+
+- `Software Engineering/Phase 2 EndToEnd/feature-end-to-end-design`
+
+The end-to-end feature design skills are:
+
+- `feature-outcome-definition`
+- `feature-scope-definition`
+- `acceptance-criteria-writing`
+- `design-it-twice`
+- `module-and-boundary-design`
+- `interface-first-design`
+- `data-model-design`
+- `backend-and-business-logic-design`
+- `api-contract-design`
+- `frontend-flow-design`
+- `error-and-edge-case-design`
+- `test-plan-design`
+
 ## Recommended Use
 
 For project guardrails:
@@ -69,6 +94,12 @@ For feature breakdown:
 
 ```text
 Use $feature-breakdown-router to create FEATURE_MAP.md for this project.
+```
+
+For end-to-end feature design:
+
+```text
+Use $feature-design-router to create FEATURE_DESIGN.md for this feature.
 ```
 
 Each router skill tells the agent to invoke the matching group skills in order and synthesize the results into a durable Markdown reference for future coding work.

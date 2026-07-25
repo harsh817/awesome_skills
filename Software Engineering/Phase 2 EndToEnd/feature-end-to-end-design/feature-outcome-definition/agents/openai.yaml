@@ -1,0 +1,4 @@
+interface:
+  display_name: "feature-outcome-definition"
+  short_description: "Design one feature end to end"
+  default_prompt: "Use $feature-outcome-definition to design one feature end to end."

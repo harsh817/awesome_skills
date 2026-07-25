@@ -1,0 +1,4 @@
+interface:
+  display_name: "feature-scope-definition"
+  short_description: "Design one feature end to end"
+  default_prompt: "Use $feature-scope-definition to design one feature end to end."

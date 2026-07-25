@@ -1,0 +1,4 @@
+interface:
+  display_name: "error-and-edge-case-design"
+  short_description: "Design one feature end to end"
+  default_prompt: "Use $error-and-edge-case-design to design one feature end to end."

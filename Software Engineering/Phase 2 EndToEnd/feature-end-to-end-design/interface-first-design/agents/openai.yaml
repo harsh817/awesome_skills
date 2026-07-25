@@ -1,0 +1,4 @@
+interface:
+  display_name: "interface-first-design"
+  short_description: "Design one feature end to end"
+  default_prompt: "Use $interface-first-design to design one feature end to end."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "test-plan-design"
+  short_description: "Design one feature end to end"
+  default_prompt: "Use $test-plan-design to design one feature end to end."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "feature-design-router"
+  short_description: "Design one feature end to end"
+  default_prompt: "Use $feature-design-router to design one feature end to end."

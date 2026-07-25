@@ -1,0 +1,4 @@
+interface:
+  display_name: "backend-and-business-logic-design"
+  short_description: "Design one feature end to end"
+  default_prompt: "Use $backend-and-business-logic-design to design one feature end to end."

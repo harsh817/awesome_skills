@@ -1,0 +1,4 @@
+interface:
+  display_name: "data-model-design"
+  short_description: "Design one feature end to end"
+  default_prompt: "Use $data-model-design to design one feature end to end."

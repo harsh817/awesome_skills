@@ -1,0 +1,4 @@
+interface:
+  display_name: "frontend-flow-design"
+  short_description: "Design one feature end to end"
+  default_prompt: "Use $frontend-flow-design to design one feature end to end."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "module-and-boundary-design"
+  short_description: "Design one feature end to end"
+  default_prompt: "Use $module-and-boundary-design to design one feature end to end."
