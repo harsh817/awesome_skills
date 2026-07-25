@@ -1,0 +1,4 @@
+interface:
+  display_name: "documentation-review"
+  short_description: "Aligns docs and comments with the feature"
+  default_prompt: "Use $documentation-review to review and update documentation for this feature."

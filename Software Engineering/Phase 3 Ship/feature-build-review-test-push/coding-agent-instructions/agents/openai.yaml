@@ -1,0 +1,4 @@
+interface:
+  display_name: "coding-agent-instructions"
+  short_description: "Turns a feature plan into precise coding instructions"
+  default_prompt: "Use $coding-agent-instructions to write implementation instructions for this feature."

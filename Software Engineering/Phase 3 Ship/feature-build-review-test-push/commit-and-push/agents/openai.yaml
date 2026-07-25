@@ -1,0 +1,4 @@
+interface:
+  display_name: "commit-and-push"
+  short_description: "Commits and pushes one verified feature"
+  default_prompt: "Use $commit-and-push to commit and push this completed feature."

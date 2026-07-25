@@ -1,0 +1,4 @@
+interface:
+  display_name: "small-slice-implementation"
+  short_description: "Builds the feature as one small vertical slice"
+  default_prompt: "Use $small-slice-implementation to implement the next feature slice."

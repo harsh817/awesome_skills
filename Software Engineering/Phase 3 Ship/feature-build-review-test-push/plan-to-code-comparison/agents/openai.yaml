@@ -1,0 +1,4 @@
+interface:
+  display_name: "plan-to-code-comparison"
+  short_description: "Checks whether code matches the feature plan"
+  default_prompt: "Use $plan-to-code-comparison to compare the implementation against the plan."

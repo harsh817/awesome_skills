@@ -1,0 +1,4 @@
+interface:
+  display_name: "repository-inspection"
+  short_description: "Maps the existing repo before coding"
+  default_prompt: "Use $repository-inspection to inspect the project before implementing this feature."

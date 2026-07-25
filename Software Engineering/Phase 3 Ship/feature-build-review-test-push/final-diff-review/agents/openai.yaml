@@ -1,0 +1,4 @@
+interface:
+  display_name: "final-diff-review"
+  short_description: "Reviews the final diff before commit"
+  default_prompt: "Use $final-diff-review to inspect the final diff before delivery."

@@ -1,6 +1,6 @@
 # awesome_skills
 
-Project planning, foundation, and guardrail skills for coding agents.
+Project planning, foundation, guardrail, design, delivery, and shipping skills for coding agents.
 
 This repository contains a coordinated set of skills based on the design principles from John Ousterhout's *A Philosophy of Software Design*: reduce complexity, prefer deep modules, hide information behind stable interfaces, keep dependencies obvious, and work strategically.
 
@@ -100,6 +100,37 @@ For end-to-end feature design:
 
 ```text
 Use $feature-design-router to create FEATURE_DESIGN.md for this feature.
+```
+
+## Phase 3 Ship
+
+Main entry point:
+
+- `feature-ship-router` - invokes the build, review, test, and push skills one by one and creates or updates `FEATURE_DELIVERY.md`, the comprehensive delivery document for one working feature.
+
+Folder:
+
+- `Software Engineering/Phase 3 Ship/feature-build-review-test-push`
+
+The feature shipping skills are:
+
+- `repository-inspection`
+- `implementation-planning`
+- `coding-agent-instructions`
+- `small-slice-implementation`
+- `run-behavior-verification`
+- `plan-to-code-comparison`
+- `design-complexity-review`
+- `strategic-fixing-refactoring`
+- `test-implementation`
+- `documentation-review`
+- `final-diff-review`
+- `commit-and-push`
+
+For build, review, test, and push:
+
+```text
+Use $feature-ship-router to create FEATURE_DELIVERY.md and ship this feature.
 ```
 
 Each router skill tells the agent to invoke the matching group skills in order and synthesize the results into a durable Markdown reference for future coding work.

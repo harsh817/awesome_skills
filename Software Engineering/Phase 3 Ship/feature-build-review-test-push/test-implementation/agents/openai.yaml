@@ -1,0 +1,4 @@
+interface:
+  display_name: "test-implementation"
+  short_description: "Adds behavior-focused tests for the feature"
+  default_prompt: "Use $test-implementation to add or update tests for this feature."

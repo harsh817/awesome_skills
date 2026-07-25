@@ -1,0 +1,4 @@
+interface:
+  display_name: "feature-ship-router"
+  short_description: "Routes feature work through build, review, test, and push"
+  default_prompt: "Use $feature-ship-router to build, verify, document, commit, and push one feature."

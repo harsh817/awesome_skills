@@ -1,0 +1,4 @@
+interface:
+  display_name: "design-complexity-review"
+  short_description: "Reviews feature code for avoidable complexity"
+  default_prompt: "Use $design-complexity-review to review this feature for design complexity."

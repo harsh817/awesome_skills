@@ -1,0 +1,4 @@
+interface:
+  display_name: "strategic-fixing-refactoring"
+  short_description: "Fixes defects and refactors without expanding scope"
+  default_prompt: "Use $strategic-fixing-refactoring to fix review or verification issues strategically."

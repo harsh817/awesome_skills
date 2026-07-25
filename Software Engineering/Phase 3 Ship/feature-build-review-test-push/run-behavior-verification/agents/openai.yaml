@@ -1,0 +1,4 @@
+interface:
+  display_name: "run-behavior-verification"
+  short_description: "Proves implemented behavior works"
+  default_prompt: "Use $run-behavior-verification to verify this feature's behavior."
