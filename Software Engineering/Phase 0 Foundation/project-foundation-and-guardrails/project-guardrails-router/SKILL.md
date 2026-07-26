@@ -25,6 +25,63 @@ Act as the single entry point for the full Project Foundation and Guardrails sys
 
 Invoke the following skills explicitly, in this exact order. Complete the current skill's section in `AGENT_GUARDRAILS.md` before invoking the next skill. Do not skip a skill unless the user explicitly removes that guardrail from scope.
 
+## Visible Routing Protocol
+
+When this router is invoked, the agent must make the routing visible to the user. Do not silently blend guardrail phases together.
+
+Before writing or updating guardrails:
+
+1. Create a visible checklist with all 12 guardrail subskills in order.
+2. Mark only the current subskill as `in_progress`.
+3. Announce the current subskill by exact name, for example: `Invoking $project-goal-and-scope`.
+4. Read that subskill's `SKILL.md` completely before acting on that phase.
+5. Perform only the work that belongs to that guardrail phase.
+6. Update the matching section in `AGENT_GUARDRAILS.md`.
+7. Mark the subskill complete before moving to the next one.
+
+Each phase must produce an observable artifact:
+
+- An `AGENT_GUARDRAILS.md` section update, or
+- A concrete project rule, boundary, convention, testing rule, git rule, safety rule, or operating rule, or
+- A short explicit note that no change was needed and why.
+
+If guardrail work has already happened before this router is invoked, still run the full visible sequence. In that case, use early phases to inspect and reconcile existing guardrails instead of pretending they already happened.
+
+Do not jump from project goal directly to implementation rules, from technology choices directly to tests, or from guardrail writing directly to handoff without visibly completing the intervening subskills.
+
+## Phase Work And Handoff Protocol
+
+Router phases must do real work. Naming or reading a subskill is not enough to complete a phase.
+
+For every guardrail phase:
+
+1. Read the latest `Routing Log` entry in `AGENT_GUARDRAILS.md`, if one exists.
+2. Treat that entry as the incoming handoff from the previous skill.
+3. Inspect the project, existing rules, codebase facts, or current guardrail section needed for this phase.
+4. Produce phase output: concrete rules, observations, conflicts, questions, reconciled project facts, or an explicit "no change needed" note backed by evidence.
+5. Update the matching `AGENT_GUARDRAILS.md` section before moving on.
+6. Add a new `Routing Log` handoff entry for the next skill.
+7. Mark the phase with exactly one status: `done`, `needs_user_answer`, `needs_fix`, `deferred`, or `blocked`.
+
+Use this handoff format:
+
+```md
+### $current-skill -> $next-skill
+Status: done | needs_user_answer | needs_fix | deferred | blocked
+Work completed:
+- ...
+Evidence or files checked:
+- ...
+Questions or TBDs:
+- ...
+Next skill focus:
+- ...
+```
+
+The next skill must consume the previous handoff before doing its own work. If a phase has questions that block safe progress, ask the user or write a precise `TBD` in `AGENT_GUARDRAILS.md`. If a phase has only nonblocking questions, record them and continue with the safest stated assumption.
+
+No phase may complete with only "invoked skill" or "read skill". It must leave an artifact in `AGENT_GUARDRAILS.md`, the routing log, or both.
+
 1. Invoke `$project-goal-and-scope`.
    - Write `## 1. Project Goal And Scope`.
    - Define what the app is, who it serves, what outcomes matter, what is in scope, and what is out of scope.
@@ -71,6 +128,11 @@ Invoke the following skills explicitly, in this exact order. Complete the curren
 - Preserve user-written project rules and reconcile conflicts explicitly.
 - When updating an existing `AGENT_GUARDRAILS.md`, preserve valid project-specific decisions and only replace stale or conflicting text.
 - The user should only need to invoke `$project-guardrails-router`; this router is responsible for invoking the other twelve skills automatically.
+- Do not finish the router until all guardrail subskills are visibly complete in the checklist and represented in `AGENT_GUARDRAILS.md`.
+- Do not mark a subskill complete until it has written its phase output and handoff entry.
+- If a later phase changes an earlier guardrail decision, route back to the affected earlier subskill, update its section, then continue forward again.
+- If a phase uncovers implementation work, record it as a rule, risk, or follow-up rather than doing unplanned implementation inside this router.
+- In the final response, list each invoked subskill and the concrete result it produced.
 
 ## Document Rules
 
@@ -78,6 +140,7 @@ The final document must include:
 
 - A first section named `Read This First` that says coding agents must read the whole file before starting and keep referring to it until the project or task is complete.
 - One section for each of the twelve guardrail areas, in the same order as the Auto Flow.
+- A `Routing Log` section with phase handoffs.
 - A final section named `Open Questions And TBDs`.
 - Short bullets or tables, not long essays.
 - Concrete examples only when they prevent likely misuse.

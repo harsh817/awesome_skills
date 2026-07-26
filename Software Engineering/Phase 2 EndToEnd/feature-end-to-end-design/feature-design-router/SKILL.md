@@ -23,6 +23,63 @@ Act as the single entry point for Phase 2 EndToEnd: design one feature across fr
 
 The user should only need to invoke `$feature-design-router`. This router is responsible for invoking these skills explicitly, one by one, by exact skill name.
 
+## Visible Routing Protocol
+
+When this router is invoked, the agent must make the routing visible to the user. Do not silently blend phases together.
+
+Before doing design work:
+
+1. Create a visible checklist with all 12 subskills in order.
+2. Mark only the current subskill as `in_progress`.
+3. Announce the current subskill by exact name, for example: `Invoking $feature-outcome-definition`.
+4. Read that subskill's `SKILL.md` completely before acting on that phase.
+5. Perform only the work that belongs to that phase.
+6. Update the matching section in `FEATURE_DESIGN.md`.
+7. Mark the subskill complete before moving to the next one.
+
+Each phase must produce an observable artifact:
+
+- A `FEATURE_DESIGN.md` section update, or
+- A design decision, acceptance criterion, interface, model, API, frontend flow, edge case, or test-plan change, or
+- A short explicit note that no change was needed and why.
+
+If design work has already happened before this router is invoked, still run the full visible sequence. In that case, use early phases to inspect and reconcile existing design decisions instead of pretending they already happened.
+
+Do not jump from outcome directly to API/backend/frontend details, from design directly to implementation, or from one layer to another without visibly completing the intervening subskills.
+
+## Phase Work And Handoff Protocol
+
+Router phases must do real work. Naming or reading a subskill is not enough to complete a phase.
+
+For every subskill phase:
+
+1. Read the latest `Routing Log` entry in `FEATURE_DESIGN.md`, if one exists.
+2. Treat that entry as the incoming handoff from the previous skill.
+3. Inspect the project, requirements, or existing design sections needed for this phase.
+4. Produce phase output: observations, design decisions, interfaces, model/API/frontend/test changes, questions, or an explicit "no change needed" note backed by evidence.
+5. Update the matching `FEATURE_DESIGN.md` section before moving on.
+6. Add a new `Routing Log` handoff entry for the next skill.
+7. Mark the phase with exactly one status: `done`, `needs_user_answer`, `needs_fix`, `deferred`, or `blocked`.
+
+Use this handoff format:
+
+```md
+### $current-skill -> $next-skill
+Status: done | needs_user_answer | needs_fix | deferred | blocked
+Work completed:
+- ...
+Evidence or files checked:
+- ...
+Questions or TBDs:
+- ...
+Next skill focus:
+- ...
+```
+
+The next skill must consume the previous handoff before doing its own work. If a phase has questions that block safe progress, ask the user or write a precise `TBD` in `FEATURE_DESIGN.md`. If a phase has only nonblocking questions, record them and continue with the safest stated assumption.
+
+No phase may complete with only "invoked skill" or "read skill". It must leave an artifact in `FEATURE_DESIGN.md`, the routing log, or both.
+
 1. Invoke `$feature-outcome-definition`.
    - Write or update `Feature Outcome`.
 2. Invoke `$feature-scope-definition`.
@@ -68,6 +125,7 @@ The user should only need to invoke `$feature-design-router`. This router is res
 - Test Plan
 - Existing Project Comparison
 - Update Notes
+- Routing Log
 - Open Questions And TBDs
 
 ## Operating Rules
@@ -77,6 +135,11 @@ The user should only need to invoke `$feature-design-router`. This router is res
 - Keep every layer aligned with the same acceptance criteria.
 - Update `FEATURE_DESIGN.md` in the same change when design decisions change during implementation.
 - Treat `FEATURE_DESIGN.md` as the feature design source of truth unless the user gives a newer explicit instruction.
+- Do not finish the router until all subskills are visibly complete in the checklist and represented in `FEATURE_DESIGN.md`.
+- Do not mark a subskill complete until it has written its phase output and handoff entry.
+- If a later phase changes an earlier decision, route back to the affected earlier subskill, update its section, then continue forward again.
+- If a phase uncovers implementation work, record it as a design requirement or follow-up rather than doing unplanned implementation inside this router.
+- In the final response, list each invoked subskill and the concrete result it produced.
 
 ## Expected Outcome
 

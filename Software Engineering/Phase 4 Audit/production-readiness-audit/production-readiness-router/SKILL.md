@@ -45,6 +45,64 @@ Act as the single entry point for Phase 4 Audit: decide whether a product, featu
 
 The user should only need to invoke `$production-readiness-router`. This router is responsible for invoking these skills explicitly, one by one, by exact skill name.
 
+## Visible Routing Protocol
+
+When this router is invoked, the agent must make the routing visible to the user. Do not silently blend audit phases together.
+
+Before doing readiness audit work:
+
+1. Create a visible checklist with all 12 audit subskills in order.
+2. Mark only the current subskill as `in_progress`.
+3. Announce the current subskill by exact name, for example: `Invoking $requirements-completeness-audit`.
+4. Read that subskill's `SKILL.md` completely before acting on that phase.
+5. Perform only the work that belongs to that audit phase.
+6. Update the matching section in `PRODUCTION_READINESS.md`.
+7. Mark the subskill complete before moving to the next one.
+
+Each phase must produce an observable artifact:
+
+- A `PRODUCTION_READINESS.md` section update, or
+- An evidence-backed pass, pass-with-risk, fail, or unknown finding, or
+- A blocker, accepted risk, measurement, command result, file reference, or operational-evidence note, or
+- A short explicit note that no evidence was available and what remains unknown.
+
+If audit work has already happened before this router is invoked, still run the full visible sequence. In that case, use early phases to inspect and reconcile existing readiness evidence instead of pretending they already happened.
+
+Do not jump from requirements directly to final decision, from tests directly to security/deployment conclusions, or from audit findings directly to readiness without visibly completing the intervening subskills.
+
+## Phase Work And Handoff Protocol
+
+Router phases must do real work. Naming or reading a subskill is not enough to complete a phase.
+
+For every audit phase:
+
+1. Read the latest `Routing Log` entry in `PRODUCTION_READINESS.md`, if one exists.
+2. Treat that entry as the incoming handoff from the previous skill.
+3. Inspect the project, evidence sources, existing findings, or current audit section needed for this phase.
+4. Produce phase output: observations, evidence-backed findings, blockers, accepted-risk candidates, questions, measurements, command results, or an explicit "no evidence available" note.
+5. Update the matching `PRODUCTION_READINESS.md` section before moving on.
+6. Add a new `Routing Log` handoff entry for the next skill.
+7. Mark the phase with exactly one status: `done`, `needs_user_answer`, `needs_fix`, `deferred`, or `blocked`.
+
+Use this handoff format:
+
+```md
+### $current-skill -> $next-skill
+Status: done | needs_user_answer | needs_fix | deferred | blocked
+Work completed:
+- ...
+Evidence or files checked:
+- ...
+Questions or TBDs:
+- ...
+Next skill focus:
+- ...
+```
+
+The next skill must consume the previous handoff before doing its own work. If a phase has questions that block a readiness decision, ask the user or write a precise `TBD` in `PRODUCTION_READINESS.md`. If a phase has only nonblocking questions, record them and continue with the safest stated assumption.
+
+No phase may complete with only "invoked skill" or "read skill". It must leave an artifact in `PRODUCTION_READINESS.md`, the routing log, evidence output, blockers, accepted risks, or a documented readiness decision.
+
 1. Invoke `$requirements-completeness-audit`.
    - Write or update `Requirements Completeness Audit`.
 2. Invoke `$architecture-complexity-audit`.
@@ -91,6 +149,7 @@ The user should only need to invoke `$production-readiness-router`. This router 
 - Production Readiness Decision
 - Accepted Risks
 - Blockers
+- Routing Log
 - Change Log
 - Open Questions And TBDs
 
@@ -103,6 +162,11 @@ Use `references/production-readiness-template.md` when creating the document fro
 - Prefer measured facts over guesses, especially for performance, capacity, reliability, and deployment.
 - Update `PRODUCTION_READINESS.md` whenever fixes, evidence, risk acceptance, or project behavior changes.
 - Keep the final decision to exactly one of: `READY`, `READY WITH ACCEPTED RISKS`, or `NOT READY`.
+- Do not enter `$production-readiness-decision` until all previous audit subskills are visibly complete in the checklist and represented in `PRODUCTION_READINESS.md`.
+- Do not mark a subskill complete until it has written its phase output and handoff entry.
+- If a phase uncovers a blocker that must be fixed before readiness can be decided, record it in `Blockers`, route the work back to the appropriate implementation/fixing skill when requested, and repeat affected audit phases after fixes.
+- If a phase uncovers implementation work, record it as a blocker, accepted-risk candidate, or follow-up rather than doing unplanned implementation inside this router.
+- In the final response, list each invoked subskill and the concrete result it produced.
 
 ## Example
 
