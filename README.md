@@ -1,6 +1,6 @@
 # awesome_skills
 
-Project planning, foundation, guardrail, design, delivery, shipping, and production readiness skills for coding agents.
+Project planning, foundation, guardrail, unknown discovery, design, delivery, shipping, and production readiness skills for coding agents.
 
 This repository contains a coordinated set of skills based on the design principles from John Ousterhout's *A Philosophy of Software Design*: reduce complexity, prefer deep modules, hide information behind stable interfaces, keep dependencies obvious, and work strategically.
 
@@ -84,6 +84,12 @@ The end-to-end feature design skills are:
 
 ## Recommended Use
 
+For unknown discovery between phases:
+
+```text
+Use $unknowns-router to create UNKNOWNS.md and ask focused questions before the next phase.
+```
+
 For project guardrails:
 
 ```text
@@ -162,6 +168,32 @@ For production readiness:
 
 ```text
 Use $production-readiness-router to create PRODUCTION_READINESS.md and decide readiness.
+```
+
+## Unknowns Toolkit
+
+Main entry point:
+
+- `unknowns-router` - invokes the four question-first unknown discovery skills one by one and creates or updates `UNKNOWNS.md`, the lightweight document for clarifying what to ask, inspect, assume, or defer before the next workflow phase.
+
+Folder:
+
+- `Software Engineering/Unknowns Toolkit/agentic-unknown-discovery`
+
+The unknown discovery skills are:
+
+- `clarify-knowns`
+- `surface-questions`
+- `make-tacit-visible`
+- `find-blindspots`
+
+Use this toolkit between phases:
+
+```text
+Phase 0 Foundation -> Unknowns Toolkit -> Phase 1 Features
+Phase 1 Features -> Unknowns Toolkit -> Phase 2 EndToEnd
+Phase 2 EndToEnd -> Unknowns Toolkit -> Phase 3 Ship
+Phase 3 Ship -> Unknowns Toolkit -> Phase 4 Audit
 ```
 
 Each router skill tells the agent to invoke the matching group skills in order and synthesize the results into a durable Markdown reference for future coding work.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "unknowns-router"
+  short_description: "Routes question-first unknown discovery"
+  default_prompt: "Use $unknowns-router to ask focused questions, update UNKNOWNS.md, and recommend the next workflow step."

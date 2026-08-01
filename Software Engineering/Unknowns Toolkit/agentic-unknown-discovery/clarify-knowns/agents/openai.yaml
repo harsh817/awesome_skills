@@ -1,0 +1,4 @@
+interface:
+  display_name: "clarify-knowns"
+  short_description: "Captures what is already true"
+  default_prompt: "Use $clarify-knowns to ask what is already known before the next phase."

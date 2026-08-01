@@ -1,0 +1,4 @@
+interface:
+  display_name: "make-tacit-visible"
+  short_description: "Turns tacit taste into usable criteria"
+  default_prompt: "Use $make-tacit-visible to ask for references, reactions, and criteria."

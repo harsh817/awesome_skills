@@ -1,0 +1,4 @@
+interface:
+  display_name: "find-blindspots"
+  short_description: "Finds hidden assumptions and expert concerns"
+  default_prompt: "Use $find-blindspots to ask what we may be missing before proceeding."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "surface-questions"
+  short_description: "Exposes open decisions and ambiguities"
+  default_prompt: "Use $surface-questions to ask which unknowns could change the work."
