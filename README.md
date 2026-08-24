@@ -8,6 +8,32 @@ This repository contains a coordinated set of skills based on the design princip
 
 All skills live under `Software Engineering/`.
 
+## Video Video Editing
+
+Main entry point:
+
+- `production-video-pipeline` - coordinates reference analysis, storyboard planning, ComfyUI video generation, Hyperframes editing, and quality review/fix into one production workflow.
+
+Folder:
+
+- `Video Video Editing/production-video-pipeline`
+
+The video production skills are:
+
+- `production-video-pipeline`
+- `reference-video-analysis`
+- `video-storyboard-planner`
+- `comfyui-video-generation`
+- `fashion-visual-direction`
+- `hyperframes-video-editing`
+- `video-quality-review-fix`
+
+For AI-assisted video production:
+
+```text
+Use $production-video-pipeline to create a coherent short video from a reference, concept, or outfit brief with final proof.
+```
+
 ## Phase 0 Foundation
 
 Main entry point:
