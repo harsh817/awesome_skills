@@ -40,6 +40,8 @@ Future editing styles should live as references in this skill, not inside the cr
 
 When a user provides a reference video, create or select a style pack from the reference. Borrow the edit grammar, not the exact shots.
 
+For gated productions, write the chosen style and rejection rules into `G2 Style Direction` in the project `PRODUCTION_GATES.md`. Reject reference elements that hurt the current concept even if they appear in the source. For example, diagnostic overlays may become clean pointer labels for a face-led grooming video instead of heatmaps on the face.
+
 ## Handoff
 
 Return a style brief for the storyboard and editor:
@@ -51,4 +53,3 @@ Return a style brief for the storyboard and editor:
 - Required proof devices.
 - Transition and motion rules.
 - What must not be used because it would break the style.
-

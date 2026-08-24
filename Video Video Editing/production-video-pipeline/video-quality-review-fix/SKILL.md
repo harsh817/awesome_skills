@@ -47,6 +47,8 @@ Do not call a video production ready only because it rendered. It should have:
 - No obvious deformation in key frames.
 - Proof sheet or sampled frames for the changed area.
 
+For gated productions, update the relevant gate in `PRODUCTION_GATES.md`. If the issue blocks quality, mark the gate `needs-fix` and name the exact stage that must be redone. Do not mark `G7 Final Quality` approved only because the render completed.
+
 ## Response
 
 Lead with the real issue, then the fix. Be direct if the output is not good enough.

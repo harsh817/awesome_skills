@@ -59,4 +59,4 @@ After the director pass, hand a concrete plan to the storyboard and production s
 - Handoff notes for `editing-style-director`, including any reference style to extract or style pack to use.
 - Review checkpoints and known risks.
 
-Do not call a production ready until the final render matches the director pass.
+For gated productions, write the director pass into `G1 Creative Brief` in the project `PRODUCTION_GATES.md` and mark it `approved`, `needs-fix`, or `pending` for user approval. Do not call a production ready until the final render matches the director pass.
