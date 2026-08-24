@@ -1,6 +1,6 @@
 ---
 name: production-quality-gates
-description: Manage approval gates for AI video production so creative direction, style, storyboard, assets, clips, edit, and final review are explicitly accepted before moving forward.
+description: Manage approval gates for AI video production so product goal, creative direction, style, storyboard, assets, clips, edit, and final review are explicitly accepted before moving forward.
 metadata:
   short-description: Gate AI video production quality
 ---
@@ -42,6 +42,10 @@ Do not silently treat a failed gate as approved.
 
 Use these gates for production video work:
 
+0. `G0 Product / Goal Intake`
+   - Confirms the product or offer, target viewer, business goal, desired viewer action, belief shift, proof, emotional direction, and constraints.
+   - Blocks creative work if the video has no clear commercial or strategic purpose.
+
 1. `G1 Creative Brief`
    - Confirms audience, objective, emotional hook, promise, and core message.
    - Blocks production if the idea is vague or the viewer takeaway is unclear.
@@ -80,7 +84,8 @@ When the user explicitly asks to move fast, keep the gates but make each review 
 
 Use gates to coordinate the specialist skills:
 
-- `marketing-creative-director` produces the `G1 Creative Brief` packet.
+- `product-goal-intake` produces the `G0 Product / Goal Intake` packet.
+- `marketing-creative-director` produces the `G1 Creative Brief` packet from the approved G0 packet.
 - `editing-style-director` produces the `G2 Style Direction` packet.
 - `video-storyboard-planner` produces the `G3 Storyboard` packet.
 - `imagegen`, ComfyUI image workflows, or other image tools produce `G4 Keyframes`.
@@ -99,4 +104,3 @@ Each review should answer:
 - What is the likely cause?
 - What exact fix is needed?
 - Can the next stage proceed?
-

@@ -16,6 +16,7 @@ Copy this into a project-level `PRODUCTION_GATES.md` file and update it as the w
 
 | Gate | Status | Owner | Proof | Next Action |
 | --- | --- | --- | --- | --- |
+| G0 Product / Goal Intake | pending | user + Codex | product/goal intake packet | approve or clarify |
 | G1 Creative Brief | pending | user + Codex | brief packet | approve or revise |
 | G2 Style Direction | pending | user + Codex | style packet/reference frames | approve or revise |
 | G3 Storyboard | pending | user + Codex | timed storyboard | approve or revise |
@@ -23,6 +24,22 @@ Copy this into a project-level `PRODUCTION_GATES.md` file and update it as the w
 | G5 Generated Clips | pending | Codex + user | clip proof sheet | approve or regenerate clips |
 | G6 Edit Preview | pending | user + Codex | preview MP4/proof frames | approve or edit |
 | G7 Final Quality | pending | Codex + user | final MP4/proof sheet/validation | deliver or fix |
+
+## G0 Product / Goal Intake
+
+- Status:
+- Product / offer:
+- Target viewer:
+- Viewer problem:
+- Desired belief shift:
+- Desired action:
+- Business goal:
+- Core proof:
+- Emotional direction:
+- Mandatory inclusions:
+- Must avoid:
+- Rework notes:
+- Decision:
 
 ## G1 Creative Brief
 
@@ -99,4 +116,3 @@ Copy this into a project-level `PRODUCTION_GATES.md` file and update it as the w
 - Creative quality:
 - Remaining risks:
 - Decision:
-

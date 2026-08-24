@@ -13,6 +13,8 @@ Use this skill when a video, ad, reel, product demo, fashion explainer, transfor
 
 Act as the creative director for the whole production. Do not jump straight into prompts, ComfyUI, or Hyperframes. First decide what the viewer must feel, understand, believe, and remember.
 
+For gated productions, read or establish `G0 Product / Goal Intake` before writing the creative brief. If the product, target viewer, desired action, or proof is unclear, route to `product-goal-intake` first instead of inventing the missing business context.
+
 This skill owns the creative strategy and visual planning. It does not own a fixed editing style. For pacing, typography, transitions, overlays, and reference-specific edit grammar, hand off to `editing-style-director`.
 
 ## Director Pass
