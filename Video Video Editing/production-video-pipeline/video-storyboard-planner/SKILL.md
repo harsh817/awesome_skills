@@ -24,6 +24,7 @@ Start from:
 - Use only as many shots as the story needs.
 - Assign every shot a timestamp range and purpose.
 - Keep the subject consistent across shots.
+- When the story is about a real-looking person, profile photo, face, hairstyle, beard, clothes, colors, body shape, grooming, or styling transformation, storyboard realistic human key visuals as mandatory assets. Abstract placeholders, avatar heads, faceless bodies, and symbolic cards are not acceptable for the main visual unless the user requested an illustrative style.
 - Avoid visual jumps that require the viewer to infer missing logic.
 - Mark which shots require ComfyUI motion and which can be stills, overlays, or editorial beats.
 - Identify risky shots before generation, especially hands, faces, clothing fit, camera turns, and long transformations.
@@ -48,8 +49,8 @@ Return a timed storyboard with:
 - Shot number.
 - Time range.
 - Visual description.
+- Required visual asset type, such as realistic portrait, phone UI, product shot, generated motion clip, still bridge, or overlay.
 - Motion instruction.
 - Caption or overlay text.
 - Generation method.
 - Review checkpoint.
-

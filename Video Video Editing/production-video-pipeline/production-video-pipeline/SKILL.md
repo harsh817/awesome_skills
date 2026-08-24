@@ -35,6 +35,7 @@ Use the specialist skills when the task touches their area:
 
 - Do not rely on a single long AI video generation for the full video. Long generations are more likely to drift, repeat, or lose coherence.
 - Use short clips for visual motion, then use Hyperframes to create the edited story.
+- If the script or concept depends on a person, face, DP/profile photo, hairstyle, beard, outfit, body type, beauty, grooming, or before/after appearance, require realistic human key visuals before the edit. Do not substitute abstract avatars, silhouettes, or generic icons unless the user explicitly asks for that style.
 - Preserve the user's intent from the reference, but make the output original unless they explicitly ask for a duplicate.
 - If a timestamp fails, inspect that timestamp directly instead of guessing from the whole video.
 - When a visual beat breaks coherence, first decide whether it needs regeneration, replacement with a still/keyframe, or editorial repair in Hyperframes.
@@ -49,4 +50,3 @@ A finished response should include:
 - What changed.
 - Validation result.
 - Any remaining quality risk, if real.
-
