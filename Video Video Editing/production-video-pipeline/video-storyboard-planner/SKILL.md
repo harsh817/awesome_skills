@@ -16,6 +16,7 @@ Start from:
 - Target duration and aspect ratio.
 - Reference analysis or user concept.
 - Creative director pass, when available.
+- Editing style pass or style pack, when available.
 - Required product, outfit, character, or subject.
 - Audio source or pacing expectation.
 - Output quality target.
@@ -27,6 +28,7 @@ Start from:
 - Keep the subject consistent across shots.
 - When the story is about a real-looking person, profile photo, face, hairstyle, beard, clothes, colors, body shape, grooming, or styling transformation, storyboard realistic human key visuals as mandatory assets. Abstract placeholders, avatar heads, faceless bodies, and symbolic cards are not acceptable for the main visual unless the user requested an illustrative style.
 - For marketing creatives, every shot must have a job: hook, diagnose, compare, explain, prove, or pay off.
+- Follow the editing style pass for cut rhythm, overlay grammar, caption density, transition behavior, and proof devices.
 - Avoid visual jumps that require the viewer to infer missing logic.
 - Mark which shots require ComfyUI motion and which can be stills, overlays, or editorial beats.
 - Identify risky shots before generation, especially hands, faces, clothing fit, camera turns, and long transformations.

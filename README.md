@@ -12,7 +12,7 @@ All skills live under `Software Engineering/`.
 
 Main entry point:
 
-- `production-video-pipeline` - coordinates reference analysis, creative direction, storyboard planning, ComfyUI video generation, Hyperframes editing, and quality review/fix into one production workflow.
+- `production-video-pipeline` - coordinates reference analysis, creative direction, editing style direction, storyboard planning, ComfyUI video generation, Hyperframes editing, and quality review/fix into one production workflow.
 
 Folder:
 
@@ -23,6 +23,7 @@ The video production skills are:
 - `production-video-pipeline`
 - `reference-video-analysis`
 - `marketing-creative-director`
+- `editing-style-director`
 - `video-storyboard-planner`
 - `comfyui-video-generation`
 - `fashion-visual-direction`
